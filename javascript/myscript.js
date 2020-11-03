@@ -5,12 +5,14 @@ $(document).ready(function () {
   $(".next").click(function nextImg() {
 
   });
-})
 
-  $(".prev").click(function nextImg() {
+  $(".prev").click(function prevImg() {
 
   });
+
 })
+
+
 
 // FUNZIONI
 // funzione per scorrere img in avanti
@@ -24,10 +26,11 @@ function nextImg() {
   // se siamo all'ultima img allora torna alla prima
   // altrimenti rendi attiba la successiva
 
-  if (imgAttiva.hasClass("last")) {
-    $("img.cat.first").addClass("active");
-  } else {
-    imgAttiva.next("img").addClass("active");
+  if  (imgAttiva.hasClass("last")) {
+      $("img.cat.first").addClass("active");
+    } else {
+      imgAttiva.next("img").addClass("active");
+    }
   }
 
 
@@ -43,3 +46,4 @@ function nextImg() {
     } else {
       imgAttiva.prev("img").addClass("active");
     }
+  }
