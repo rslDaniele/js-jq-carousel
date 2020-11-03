@@ -7,6 +7,10 @@ $(document).ready(function () {
   });
 })
 
+  $(".prev").click(function nextImg() {
+
+  });
+})
 
 // FUNZIONI
 // funzione per scorrere img in avanti
@@ -25,3 +29,17 @@ function nextImg() {
   } else {
     imgAttiva.next("img").addClass("active");
   }
+
+
+
+  function prevImg() {
+
+    imgAttiva = $("img.cat.active");
+
+    imgAttiva.removeClass("active").prev("img").addClass("active");
+
+    if (imgAttiva.hasClass("first")) {
+      $("img.cat.last").addClass("active");
+    } else {
+      imgAttiva.prev("img").addClass("active");
+    }
