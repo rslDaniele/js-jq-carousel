@@ -1,8 +1,10 @@
 
-$(document).ready(function nextImg() {
+$(document).ready(function () {
 
 
-  $("i.next").click();
+  $(".next").click(function nextImg() {
+
+  });
 })
 
 
