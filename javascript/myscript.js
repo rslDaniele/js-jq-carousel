@@ -2,7 +2,7 @@
 $(document).ready(function nextImg() {
 
 
-  $(".next").click();
+  $("i.next").click();
 })
 
 
@@ -11,7 +11,7 @@ $(document).ready(function nextImg() {
 
 function nextImg() {
   // console.log("hai clickato next");
-  imgAttiva = $("cat.active");
+  imgAttiva = $("img.cat.active");
 
   imgAttiva.removeClass("active").next("img").addClass("active");
 
@@ -19,7 +19,7 @@ function nextImg() {
   // altrimenti rendi attiba la successiva
 
   if (imgAttiva.hasClass("last")) {
-    $("img.first").addClass("active");
+    $("img.cat.first").addClass("active");
   } else {
     imgAttiva.next("img").addClass("active");
   }
