@@ -4,7 +4,13 @@ $(document).ready(function () {
 
   $(".next").click(nextImg);
 
+  $(".next").click(nextDot);
+
   $(".prev").click(prevImg);
+
+  $(".prev").click(prevDot);
+
+
 });
 
 
@@ -28,6 +34,17 @@ function nextImg() {
     }
   }
 
+function nextDot() {
+    dotAttivo = $("div.dot.attivo")
+
+    dotAttivo.removeClass("attivo").next("div.dot").addClass("attivo");
+
+    if (dotAttivo.hasClass("last")) {
+      $("div.dot.first").addClass("attivo");
+    } else {
+      dotAttivo.next("div.dot").addClass("attivo");
+    }
+  }
 
 
   function prevImg() {
@@ -41,4 +58,17 @@ function nextImg() {
     } else {
       imgAttiva.prev("img").addClass("active");
     }
+
   }
+
+function prevDot() {
+  dotAttivo = $("div.dot.attivo")
+
+  dotAttivo.removeClass("attivo").prev("div.dot").addClass("attivo");
+
+  if (dotAttivo.hasClass("first")) {
+    $("div.dot.last").addClass("attivo");
+  } else {
+    dotAttivo.prev("div.dot").addClass("attivo");
+  }
+}
