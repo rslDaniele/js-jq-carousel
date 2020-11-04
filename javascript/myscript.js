@@ -72,3 +72,16 @@ function prevDot() {
     dotAttivo.prev("div.dot").addClass("attivo");
   }
 }
+
+// Correzzione code review
+$(document).keydown(function(e){
+
+  if (e.which === 39) {
+    nextImg();
+    nextDot();
+  }
+  if (e.which === 37) {
+    prevImg();
+    prevDot();
+  }
+})
