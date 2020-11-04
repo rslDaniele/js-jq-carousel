@@ -16,16 +16,12 @@ $(document).ready(function () {
 
 
 // FUNZIONI
-// funzione per scorrere img in avanti
 
+// Immagine successiva
 function nextImg() {
-  // console.log("hai clickato next");
   imgAttiva = $("img.cat.active");
 
   imgAttiva.removeClass("active");
-
-  // se siamo all'ultima img allora torna alla prima
-  // altrimenti rendi attiba la successiva
 
   if  (imgAttiva.hasClass("last")) {
       $("img.cat.first").addClass("active");
@@ -33,7 +29,7 @@ function nextImg() {
       imgAttiva.next("img").addClass("active");
     }
   }
-
+// pallino successivo
 function nextDot() {
     dotAttivo = $("div.dot.attivo")
 
@@ -46,7 +42,7 @@ function nextDot() {
     }
   }
 
-
+// immagine precedente
   function prevImg() {
 
     imgAttiva = $("img.cat.active");
@@ -61,6 +57,7 @@ function nextDot() {
 
   }
 
+// pallino precedente
 function prevDot() {
   dotAttivo = $("div.dot.attivo")
 
@@ -73,7 +70,7 @@ function prevDot() {
   }
 }
 
-// Correzzione code review
+// Correzione code review
 $(document).keydown(function(e){
 
   if (e.which === 39) {
